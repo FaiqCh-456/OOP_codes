@@ -1,5 +1,7 @@
 package labtask_2;
 
+import java.util.Random;
+
 public class Deck {
     Card cards[]= new Card[52];
 
@@ -26,5 +28,24 @@ public class Deck {
 
         return str.toString();
 }
+
+    public void Shuffle(){
+
+        Random random = new Random();
+
+        for (int i = 0;i<100;i++) {
+            int r = random.nextInt(52);
+            Card temp = cards[0];
+            cards[0] = cards[r];
+            cards[r] = temp;
+        }
+        // sirs code
+        //        for(int i =0;i<100;i++){
+//        int randomIndex=random.nextInt(52);
+//        Card temp = cards[randomIndex];
+//        cards[randomIndex]= cards[0];
+//        cards[0] = temp;
+//        }
+    }
 
 }
