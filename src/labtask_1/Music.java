@@ -78,11 +78,10 @@ public class Music {
     public boolean equals(Music m){
 
         return this.tittle.equals(m.tittle)?true:false;
-}
+      }
 
-
-
-
-
-
-}
+//    public boolean equals(Object o){
+//        Music m=(Music)o;
+//        this.tittle==m;
+//    }
+   }
