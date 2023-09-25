@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Person {
     public Card inhand[] = new Card[52/4];
 
-    public String shuffledCardsToString() {
+    public String shuffledCards() {
         return Arrays.toString(inhand);
     }
 

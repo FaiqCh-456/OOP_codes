@@ -8,7 +8,7 @@ public class Game {
         StringBuilder str = new StringBuilder();
         for (int i = 0; i < 4; i++) {
             str.append("Player " + (i + 1) + ":\n");
-            str.append("Shuffled Cards: " + players[i].shuffledCardsToString() + "\n\n");
+            str.append("Shuffled Cards: " + players[i].shuffledCards() + "\n\n");
         }
         return str.toString();
     }
