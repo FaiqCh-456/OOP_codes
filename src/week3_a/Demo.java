@@ -1,4 +1,4 @@
-
+package week3_a;
 
 public class Demo {
     public static void main(String[] args) {

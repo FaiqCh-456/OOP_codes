@@ -1,3 +1,5 @@
+package week3_a;
+
 public class Rectangle {
 
     private double length;
