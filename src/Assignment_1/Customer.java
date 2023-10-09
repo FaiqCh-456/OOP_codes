@@ -1,7 +1,7 @@
 package Assignment_1;
 
 public class Customer {
-    private int customerId;
+    private final int customerId;
 
     public Customer(int customerId) {
         this.customerId = customerId;

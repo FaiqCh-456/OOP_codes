@@ -5,9 +5,9 @@ import java.util.Random;
 
 public class PlotManager {
     private static final int TOTAL_PLOTS = 100;
-    private boolean[] plotAvailability = new boolean[TOTAL_PLOTS];
+    private final boolean[] plotAvailability = new boolean[TOTAL_PLOTS];
     public int customerCount = 0;
-    private Random random = new Random();
+    private final Random random = new Random();
 
     public void allotPlotsRandomly(PlotCustomer customer, int plotsToAllot) {
         for (int i = 0; i < plotsToAllot; i++) {

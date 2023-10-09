@@ -10,12 +10,11 @@ public class Main {
         System.out.println("********_Welcome to Plot Balloting System_*******");
         System.out.println();
         System.out.println("********_Total Number of plots are 100_*******");
-        System.out.println("****The maximum number of plots that can be allocated to a customer are 10***");
+        System.out.println("****_The maximum number of plots that can be allocated to a customer are 10_****");
         System.out.println();
 
         PlotBallotingApp app = new PlotBallotingApp();
         app.run(scanner);
 
-        scanner.close();
     }
 }

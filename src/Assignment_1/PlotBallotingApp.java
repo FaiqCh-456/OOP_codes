@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class PlotBallotingApp {
-    private PlotManager plotManager;
+    private final PlotManager plotManager;
 
     public PlotBallotingApp() {
         this.plotManager = new PlotManager();
@@ -25,11 +25,11 @@ public class PlotBallotingApp {
                 continue;
             }
 
-            Customer customer = new PlotCustomer(++plotManager.customerCount);
-            plotManager.allotPlotsRandomly((PlotCustomer) customer, plotsToAllot);
+            PlotCustomer customer = new PlotCustomer(++plotManager.customerCount);
+            plotManager.allotPlotsRandomly(customer, plotsToAllot);
 
             System.out.println("Plots allotted to Customer " + customer.getCustomerId() + ": "
-                    + Arrays.toString(((PlotCustomer) customer).getAllottedPlots()));
+                    + Arrays.toString(customer.getAllottedPlots()));
             System.out.println();
         }
     }
