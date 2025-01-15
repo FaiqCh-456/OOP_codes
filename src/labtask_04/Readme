@@ -1,0 +1,66 @@
+Inventory Management System
+Project Overview
+The Inventory Management System is a Java-based application designed to manage different types of products, including Electronic Products, Furniture Products, and Grocery Products. 
+It supports functionalities like adding, updating, removing, and retrieving product details in an organized manner.
+
+Features
+Product Management:
+
+Add new products to the inventory.
+Update product prices and stock quantities.
+Remove products from the inventory.
+Product Retrieval:
+
+Fetch product details using their unique ID.
+Display comprehensive details for each product type.
+Error Handling:
+
+Handles missing products gracefully using custom exceptions.
+Product Categorization:
+
+Supports three product categories:
+Electronic Products: Includes additional attributes like power consumption and warranty.
+Furniture Products: Includes material and dimensions.
+Grocery Products: Includes expiration date and nutritional values.
+Classes and Their Responsibilities
+1. Product
+Base class for all products.
+Contains shared attributes like id, name, price, and stockQuantity.
+Provides methods to update price and stock, and display product details.
+2. ElectronicProduct
+Subclass of Product.
+Adds attributes for powerConsumption and warranty.
+Overrides the displayDetails method to include electronic-specific details.
+3. FurnitureProduct
+Subclass of Product.
+Adds attributes for material and dimensions.
+Overrides the displayDetails method to include furniture-specific details.
+4. GroceryProduct
+Subclass of Product.
+Adds attributes for expirationDate and nutritionalValues.
+Overrides the displayDetails method to include grocery-specific details.
+5. InventoryManagementSystem
+Manages a catalog of products.
+Provides functionalities to add, update, retrieve, and remove products.
+Uses helper methods for product search and indexing.
+6. ProductNotFoundException
+Custom exception to handle cases where a product is not found in the inventory.
+7. Main
+Demonstrates the usage of the Inventory Management System.
+Example Usage
+Adding Products
+
+InventoryManagementSystem inventorySystem = new InventoryManagementSystem(10);
+
+Product electronicProduct = new ElectronicProduct("E1", "Laptop", 999.99, 10, "100W", "1 year");
+Product furnitureProduct = new FurnitureProduct("F1", "Chair", 49.99, 20, "Wood", "30x30x40 cm");
+Product groceryProduct = new GroceryProduct("G1", "Bread", 2.49, 50, "2023-10-31", "Low fat");
+
+inventorySystem.addProduct(electronicProduct);
+inventorySystem.addProduct(furnitureProduct);
+inventorySystem.addProduct(groceryProduct);
+Displaying Product Details
+
+inventorySystem.displayProductDetails("E1"); // Display details for the Laptop
+inventorySystem.displayProductDetails("F1"); // Display details for the Chair
+inventorySystem.displayProductDetails("G1"); // Display details
