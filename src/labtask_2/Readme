@@ -1,0 +1,144 @@
+Card Game Simulation in Java
+
+Overview
+
+This project simulates a card game in Java, demonstrating the creation of a deck of cards, shuffling, and distributing the cards among four players. It comprises five primary classes:
+
+Card - Represents individual playing cards.
+
+Deck - Manages the deck of 52 cards, including shuffling functionality.
+
+Person - Represents a player holding a hand of cards.
+
+Game - Manages the distribution of shuffled cards to players.
+
+MainShuffle - Contains the main method to run the simulation.
+
+Project Structure
+
+labtask_2/
+├── Card.java
+├── Deck.java
+├── Game.java
+├── MainShuffle.java
+└── Person.java
+
+Classes and Their Responsibilities
+
+1. Card
+
+Fields:
+
+String suits: The suit of the card (Clubs, Hearts, Spades, Diamonds).
+
+String ranks: The rank of the card (Ace, 1-10, Jack, Queen, King).
+
+Constructor: Initializes the suit and rank of a card.
+
+Methods:
+
+getSuits(): Returns the suit of the card.
+
+getRanks(): Returns the rank of the card.
+
+toString(): Returns a formatted string of the card (e.g., "Ace of Spades").
+
+2. Deck
+
+Fields:
+
+Card[] cards: Array holding 52 cards.
+
+String[] suits: Array of the four suits.
+
+String[] ranks: Array of the thirteen ranks.
+
+Constructor: Initializes the deck with 52 unique cards.
+
+Methods:
+
+toString(): Returns a string representation of the entire deck.
+
+Shuffle(): Randomly shuffles the deck of cards.
+
+3. Person
+
+Fields:
+
+Card[] inhand: Array holding 13 cards for each player.
+
+Methods:
+
+shuffledCards(): Returns the player's hand as a string.
+
+toString(): Formats the player's hand into a readable string.
+
+4. Game
+
+Fields:
+
+Person[] players: Array of four players.
+
+Constructor:
+
+Distributes 13 shuffled cards to each of the four players.
+
+Methods:
+
+toString(): Displays the shuffled cards for all four players.
+
+5. MainShuffle
+
+Main Method Workflow:
+
+Initializes a deck (Deck d1).
+
+Prints the deck in order.
+
+Shuffles the deck and prints the shuffled deck.
+
+Distributes the shuffled cards to four players and prints their hands.
+
+How to Run the Program
+
+Compile:
+
+javac labtask_2/*.java
+
+Run:
+
+java labtask_2.MainShuffle
+
+Sample Output
+
+CARDS IN ORDER
+Ace of Clubs
+1 of Clubs
+...
+King of Diamonds
+
+CARDS AFTER SHUFFLING
+4 of Hearts
+Jack of Spades
+...
+9 of Clubs
+
+CARDS AFTER DISTRIBUTING TO 4 PLAYERS
+Player 1:
+[4 of Hearts, 9 of Diamonds, ...]
+
+Player 2:
+[Jack of Spades, 2 of Clubs, ...]
+...
+
+Future Improvements
+
+Implement a complete card game (e.g., Poker, Blackjack).
+
+Add graphical user interface (GUI) for better interactivity.
+
+Improve the shuffle algorithm for better randomness.
+
+Author
+
+Developed for a lab assignment focusing on object-oriented programming concepts in Java.
