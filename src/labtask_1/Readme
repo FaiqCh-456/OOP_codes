@@ -1,0 +1,74 @@
+Music and Singer Management System
+Project Overview
+The Music and Singer Management System is a Java application that models a basic relationship between music tracks and their respective singers. 
+The program includes features to manage the details of music tracks, their release dates, and the associated singer's details, including debut year.
+
+Features
+Music Management:
+
+Stores details like title, duration, genre, release date, and associated singer.
+Overrides toString to provide a detailed string representation of a music object.
+Includes a custom equals method to compare music tracks by title.
+Singer Management:
+
+Stores details like name, gender, nationality, and debut year.
+Overrides toString for a clean string representation of a singer object.
+Date Management:
+
+Manages day, month, and year details.
+Provides getters and setters for manipulation.
+Overrides toString to format dates as day/month/year.
+Error Handling:
+
+Ensures proper initialization and prevents direct misuse of object attributes.
+Object Relationships:
+
+Demonstrates the relationship between a Music track and its corresponding Singer.
+Classes and Their Responsibilities
+1. Date
+Encapsulates date information (day, month, year).
+Provides methods for setting and retrieving date values.
+Overrides toString to format the date for display.
+2. Singer
+Encapsulates singer details such as name, gender, nationality, and debut year.
+Provides methods to set and retrieve values.
+Includes a toString method to provide a formatted string representation of singer details.
+3. Music
+Encapsulates music details such as title, duration, genre, release date, and singer.
+Implements a custom equals method to compare music objects by title.
+Includes a toString method to provide a formatted string representation of music details.
+4. Main
+Demonstrates the creation of Music and Singer objects.
+Links music tracks with their respective singers.
+Demonstrates the equals method for comparing music tracks.
+Example Usage
+Creating Music and Singer Objects
+
+Music m1 = new Music("Nahi milta", "2:45", "sufi", new Date(1, 4, 2021), 
+                     new Singer("Bayan", "Male", "Pakistani", new Date(13, 2, 2008)));
+System.out.println(m1);
+
+Music m2 = new Music("Mil jata hae", "2:45", "pqr", new Date(1, 4, 2021), 
+                     new Singer("XYZ", "Male", "Indian", new Date(13, 2, 2003)));
+System.out.println(m2);
+Comparing Music Tracks
+
+System.out.println(m1.equals(m2)); // Compares the title of both music tracks
+Output Example
+
+Nahi milta/2:45/sufi/1/4/2021/Bayan/Male/Pakistani/13/2/2008
+Mil jata hae/2:45/pqr/1/4/2021/XYZ/Male/Indian/13/2/2003
+false
+How to Run
+Clone or download the repository containing the code.
+Compile all .java files in the labtask_1 package using:
+
+javac labtask_1/*.java
+Run the Main class to see the program in action:
+
+java labtask_1.Main
+
+Future Enhancements:
+Add more attributes to the Music and Singer classes, such as awards and album details.
+Implement file handling to save and retrieve music data.
+Add user input for dynamic data entry.
