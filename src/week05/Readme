@@ -1,0 +1,159 @@
+Card Game Simulation in Java (Enhanced Version)
+
+Overview
+
+This Java project simulates a competitive card game for four players. The game involves dealing cards, allowing players to select and play cards in rounds, and determining round winners based on card values. Key concepts demonstrated include object-oriented design, use of enums, and basic game logic.
+
+Project Structure
+
+week05/
+├── Card.java
+├── CardDeckGameDemo.java
+├── Deck.java
+├── Game.java
+├── Hand.java
+├── Rank.java
+└── Suit.java
+
+Classes and Their Responsibilities
+
+1. Card
+
+Fields:
+
+Suit suit: The suit of the card (HEARTS, DIAMONDS, CLUBS, SPADES).
+
+Rank rank: The rank of the card (TWO to ACE).
+
+Constructor: Initializes a card with a specific suit and rank.
+
+Methods:
+
+getSuit(): Returns the suit of the card.
+
+getRank(): Returns the rank of the card.
+
+getValue(): Returns the numerical value of the rank.
+
+toString(): Provides a string representation of the card (e.g., "ACE of SPADES").
+
+2. Deck
+
+Fields:
+
+Card[] cards: Array holding 52 cards.
+
+int topCardIndex: Tracks the next card to be dealt.
+
+Constructor: Initializes and shuffles the deck.
+
+Methods:
+
+initializeDeck(): Populates the deck with all possible card combinations.
+
+shuffle(): Randomly shuffles the deck.
+
+dealCard(): Deals the top card from the deck.
+
+3. Hand
+
+Fields:
+
+Card[] cardsInHand: Array holding a maximum of 5 cards per player.
+
+int currentSize: Tracks the number of cards in hand.
+
+Methods:
+
+addCard(Card card): Adds a card to the hand.
+
+playCard(int index): Removes and returns the card at a specific index.
+
+getCards(): Returns the current cards in hand.
+
+4. Game
+
+Fields:
+
+Deck deck: The deck of cards used in the game.
+
+Hand[] playersHands: Array holding each player's hand.
+
+int numPlayers: Total number of players.
+
+Constructor: Initializes the deck and player hands.
+
+Methods:
+
+dealInitialCards(): Deals five cards to each player.
+
+playRound(int[] cardIndices): Executes a round where each player plays a card, determining the winner based on card value.
+
+getPlayersHands(): Returns players' hands.
+
+5. CardDeckGameDemo
+
+Purpose: Serves as the main class to run the game.
+
+Workflow:
+
+Initializes the game with four players.
+
+Deals five cards to each player.
+
+Runs five rounds where players select and play cards.
+
+Announces the winner of each round.
+
+6. Rank (Enum)
+
+Values: TWO(2), THREE(3), ..., TEN(10), JACK(11), QUEEN(12), KING(13), ACE(14).
+
+Purpose: Defines the rank and corresponding value of cards.
+
+7. Suit (Enum)
+
+Values: HEARTS, DIAMONDS, CLUBS, SPADES.
+
+Purpose: Defines the four suits of cards.
+
+How to Run the Program
+
+Compile the project:
+
+javac week05/*.java
+
+Run the program:
+
+java week05.CardDeckGameDemo
+
+Sample Game Flow
+
+Round 1
+Player 1's turn:
+[FOUR of SPADES, SEVEN of HEARTS, KING of CLUBS, TWO of DIAMONDS, ACE of HEARTS]
+Select a card index (0-based) to play: 4
+Player 2's turn:
+[THREE of CLUBS, NINE of SPADES, JACK of DIAMONDS, FIVE of HEARTS, QUEEN of CLUBS]
+Select a card index (0-based) to play: 3
+Player 3's turn:
+[SIX of HEARTS, EIGHT of SPADES, KING of DIAMONDS, FOUR of CLUBS, TEN of HEARTS]
+Select a card index (0-based) to play: 2
+Player 4's turn:
+[SEVEN of CLUBS, ACE of DIAMONDS, FIVE of SPADES, TWO of HEARTS, NINE of CLUBS]
+Select a card index (0-based) to play: 1
+Player 4 wins the round!
+
+Future Enhancements
+
+Game Rules: Add more complex game rules (e.g., specific winning conditions).
+
+Multiple Rounds: Track cumulative scores over multiple rounds.
+
+GUI Interface: Implement a graphical interface for better user interaction.
+
+AI Players: Add AI-controlled players for solo gameplay.
+
+Author
+
+Developed as a Java project demonstrating object-oriented design and game logic.
