@@ -1,0 +1,161 @@
+Plot Balloting System - Assignment 1
+
+Overview
+
+The Plot Balloting System is a simple console-based application implemented in Java using Object-Oriented Programming (OOP) principles. The system allows users to allocate plots to customers randomly while maintaining constraints on the number of plots per customer and ensuring no plot is assigned more than once.
+
+Features
+
+Customer Management
+
+Each customer is assigned a unique and immutable ID using the Customer class.
+
+Plot Allocation
+
+The PlotCustomer class extends the Customer class to manage plots allotted to a customer.
+
+A maximum of 10 plots can be assigned to a single customer.
+
+Random Plot Management
+
+The PlotManager class manages the availability of 100 plots.
+
+Plots are assigned randomly to customers, ensuring no duplication.
+
+User Interaction
+
+The PlotBallotingApp class handles the main logic, including user input, plot allocation, and output.
+
+The application gracefully handles invalid inputs and provides clear instructions to the user.
+
+Console-Based Interface
+
+The Main class serves as the entry point and displays system rules and instructions.
+
+Classes and Responsibilities
+
+1. Customer Class
+
+Purpose: Represents a customer with a unique ID.
+
+Key Features:
+
+customerId: A unique, immutable identifier for each customer.
+
+Getter method: getCustomerId() to retrieve the customer's ID.
+
+2. PlotCustomer Class
+
+Purpose: Extends Customer to include plot allocation details.
+
+Key Features:
+
+MAX_PLOTS_PER_CUSTOMER: A constant defining the maximum number of plots per customer.
+
+allottedPlots: An array to store the plots allotted to the customer.
+
+Methods:
+
+getAllottedPlots(): Returns the array of allotted plots.
+
+setAllottedPlot(int index, int plotNumber): Assigns a specific plot number to the customer.
+
+3. PlotManager Class
+
+Purpose: Handles the allocation of plots and manages plot availability.
+
+Key Features:
+
+TOTAL_PLOTS: The total number of plots (100).
+
+plotAvailability: A boolean array to track available plots.
+
+allotPlotsRandomly(PlotCustomer customer, int plotsToAllot): Allocates plots randomly to a customer, ensuring no duplication.
+
+4. PlotBallotingApp Class
+
+Purpose: Coordinates user input, plot allocation, and output display.
+
+Key Features:
+
+run(Scanner scanner): Handles the application flow:
+
+Accepts the number of plots to allot from the user.
+
+Validates input (1-10 plots).
+
+Allocates plots using PlotManager and displays results.
+
+Allows the user to exit the application by entering 0.
+
+5. Main Class
+
+Purpose: Entry point of the application.
+
+Key Features:
+
+Displays a welcome message and system rules.
+
+Initiates the PlotBallotingApp class to start the application.
+
+Functionalities Used
+
+Object-Oriented Programming Concepts:
+
+Encapsulation: Used to protect and manage class properties (e.g., customerId, allottedPlots).
+
+Inheritance: The PlotCustomer class inherits from the Customer class to add functionality.
+
+Polymorphism: Not explicitly used but can be extended in future enhancements.
+
+Randomization:
+
+The Random class ensures unpredictable and unique plot allocation.
+
+Arrays:
+
+Used to manage plot availability and the plots allotted to each customer.
+
+Validation:
+
+Input validation ensures only valid plot numbers (1–10) are accepted.
+
+Console I/O:
+
+The Scanner class handles user input interactively.
+
+How It Works
+
+The application starts with a welcome message and displays the rules for plot allocation.
+
+Users are prompted to input the number of plots to allocate to a customer (or 0 to exit).
+
+The system validates the input and allocates the requested number of plots randomly using PlotManager.
+
+The allocated plots are displayed for the customer.
+
+The process repeats until the user decides to exit.
+
+Example Run
+
+********_Welcome to Plot Balloting System_*******
+
+********_Total Number of plots are 100_*******
+****_The maximum number of plots that can be allocated to a customer are 10_****
+
+Enter the number of plots to allot to the customer or enter 0 to exit: 5
+Plots allotted to Customer 1: [23, 45, 67, 12, 89]
+
+Enter the number of plots to allot to the customer or enter 0 to exit: 11
+Invalid input. Number of plots should be between 1 and 10.
+
+Enter the number of plots to allot to the customer or enter 0 to exit: 0
+Thank you for using the Plot Balloting System!
+
+Future Enhancements
+
+Add a database to store customer and plot data persistently.
+
+Introduce a GUI for better user interaction.
+
+Implement advanced allocation strategies based on customer preferences.
