@@ -1,0 +1,169 @@
+Lab Management System
+
+Overview
+
+The Lab Management System is a software application designed to manage university labs, computers within those labs, and the lab attendants responsible for managing them. It allows for adding labs, tracking the status of labs, managing computer details, and retrieving detailed information about specific labs and computers.
+
+Key Functionalities
+
+University Management
+
+Add new labs to the university.
+
+Remove existing labs.
+
+Fetch details of specific labs or computers within a lab.
+
+Lab Management
+
+Maintain a list of computers within a lab.
+
+Track the status of the lab (e.g., Operational or Faulty).
+
+Assign and update lab attendants.
+
+Computer Management
+
+Store details of computers, including:
+
+Computer Number
+
+LCD Model
+
+RAM Size
+
+Hard Disk Size
+
+GPU Availability
+
+Add or remove computers from a lab.
+
+Clone existing computer configurations.
+
+Fetch and display details of specific computers.
+
+Employee Management
+
+Assign lab attendants to specific labs.
+
+Maintain details of employees, including their ID, name, and designation.
+
+Classes and Their Responsibilities
+
+1. Computer
+
+Represents an individual computer with attributes like computerNumber, lcdModel, ramSize, hddSize, and hasGpu.
+
+Provides getter and setter methods for its attributes.
+
+Implements methods for:
+
+Displaying computer details.
+
+Cloning computer configurations.
+
+Checking equality of computers based on their unique computerNumber.
+
+2. Lab
+
+Represents a lab within the university.
+
+Attributes:
+
+labID: Unique identifier for the lab.
+
+computers: Array of computers in the lab.
+
+status: Current operational status of the lab.
+
+labAttendant: Employee managing the lab.
+
+Methods:
+
+Add or remove computers from the lab.
+
+Change lab status.
+
+Fetch and display details of specific computers.
+
+Display all lab details.
+
+3. Employee
+
+Represents an employee assigned as a lab attendant.
+
+Attributes:
+
+employeeID: Unique identifier for the employee.
+
+name: Name of the employee.
+
+designation: Static designation (Lab Attendant).
+
+Methods:
+
+Display employee details.
+
+4. University
+
+Manages all labs within the university.
+
+Attributes:
+
+labs: Array of labs.
+
+Methods:
+
+Add or remove labs.
+
+Fetch details of a specific lab.
+
+Fetch details of a specific computer in a lab.
+
+5. LabStatus (Enum)
+
+Enumerates possible statuses of a lab:
+
+OPERATIONAL
+
+FAULTY_MULTIMEDIA
+
+6. Demo
+
+Entry point for the application.
+
+Demonstrates the functionality of the system by creating and managing labs, computers, and employees.
+
+Example Usage
+
+Adding a Computer to a Lab
+
+Computer c1 = new Computer("C001", "LCD-001", 8, 512, true);
+Lab lab1 = new Lab("L001", new Computer[]{c1}, LabStatus.OPERATIONAL, labAttendant);
+university.addLab(lab1);
+
+Fetching Lab Details
+
+university.fetchLabDetails("L001");
+
+Fetching Computer Details
+
+university.fetchComputerDetails("L001", "C001");
+
+Cloning a Computer
+
+Computer clonedComputer = Computer.clone(c1);
+
+Future Enhancements
+
+Add support for dynamically resizing lab capacity.
+
+Implement persistence to save and retrieve lab/computer data from a database.
+
+Add a graphical user interface (GUI) for better user interaction.
+
+Introduce user roles (e.g., admin, lab attendant) with varying permissions.
+
+Conclusion
+
+The Lab Management System provides a robust and modular solution for managing university labs and their resources. It demonstrates key OOP principles like encapsulation, inheritance, polymorphism, and composition, making it a scalable foundation for future extensions.
