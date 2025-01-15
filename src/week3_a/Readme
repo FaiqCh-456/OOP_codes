@@ -1,0 +1,136 @@
+Java Project: Product and Geometry Management
+
+Project Overview
+
+This Java project is a collection of classes designed to manage products and perform basic geometric operations. The project demonstrates the use of object-oriented programming concepts like encapsulation, method overloading, and static blocks.
+
+Project Structure
+
+Packages
+
+week3_a: Contains all Java classes for this project.
+
+Classes
+
+Date
+
+Handles date-related information (day, month, year).
+
+Methods:
+
+Getters and setters for day, month, year.
+
+toString() for date formatting.
+
+getRecentDate(Date d1, Date d2) to compare two dates.
+
+Product
+
+Represents a product with attributes like name, ID, price, manufacturing date, and quantity.
+
+Features:
+
+Static counter for auto-generating product IDs.
+
+Static and instance initializer blocks for demonstrating execution order.
+
+getLatest(Product p1, Product p2) to find the most recently manufactured product.
+
+Rectangle
+
+Models a rectangle with basic operations.
+
+Methods:
+
+calcArea() to calculate the area.
+
+calCircumference() to calculate the circumference.
+
+Rectangle1
+
+An advanced rectangle class with position coordinates (x, y).
+
+Methods:
+
+area() and circumference() calculations.
+
+min(Rectangle1 r1, Rectangle1 r2) to compare two rectangles by area.
+
+overlap(Rectangle1 r1, Rectangle1 r2) to check if two rectangles overlap.
+
+Demo
+
+Demonstrates the functionality of the Rectangle class.
+
+Prints the area and circumference of a rectangle.
+
+Driver
+
+Tests the Rectangle1 class.
+
+Calculates area, circumference, and checks for overlap between two rectangles.
+
+ProductTest
+
+Demonstrates the functionality of the Product and Date classes.
+
+Compares products based on manufacturing dates.
+
+How to Run
+
+Compile the Project:
+
+javac week3_a/*.java
+
+Run Demo Classes:
+
+Rectangle Demo:
+
+java week3_a.Demo
+
+Rectangle1 Demo:
+
+java week3_a.Driver
+
+Product Demo:
+
+java week3_a.ProductTets
+
+Output Examples
+
+Rectangle Demo:
+
+Area is = 5.0
+Circumference = 12.0
+
+Product Demo:
+
+static block A
+static block B
+Inside code block A
+Inside code block B
+constructor called
+17/9/2023
+constructor called
+17/9/2023
+000 Keyboard            500.00 3
+
+Key Concepts Demonstrated
+
+Encapsulation
+
+Static Initialization Blocks
+
+Method Overloading
+
+Object Comparison
+
+Basic Geometry Operations
+
+Author
+
+Faiq Yousaf
+
+License
+
+This project is open-source and free to use for educational purposes.
