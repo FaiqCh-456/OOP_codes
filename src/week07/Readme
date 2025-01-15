@@ -1,0 +1,31 @@
+The provided Java program demonstrates exception handling with two main focus areas:
+
+Division Handling (Divider Class)
+
+Takes two integers as input and attempts to divide them.
+Catches and handles ArithmeticException (e.g., division by zero).
+Array Access Handling (ArrayHandler Class)
+
+Attempts to access the 5th element of a 4-element array.
+Catches and handles ArrayIndexOutOfBoundsException.
+Program Flow (Demo and Driver Classes)
+Demo Class:
+
+Reads two integers from the user.
+Calls Divider.ArithmeticException() for division.
+Calls ArrayHandler.Array() to access the array.
+Driver Class:
+
+Combines division and array access in a single try-catch-finally block.
+Handles both ArithmeticException and ArrayIndexOutOfBoundsException.
+Sample Output
+
+Welcome my friend 
+5
+0
+enter two numbers to divide
+Arithmetic Exception
+array at index 4
+Array index out of bound error
+In finally block
+Bubbyeee my friend
